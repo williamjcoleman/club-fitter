@@ -7,14 +7,14 @@ from langchain.prompts import PromptTemplate
 from langchain.chains import RetrievalQA
 import os
 
+# get API key from environment variable
 from dotenv import load_dotenv
-load_dotenv()  # take environment variables from .env (especially openai api key)
+load_dotenv()  
 
-# Create Google Palm LLM model
+# Create Google Gemini Model
 llm = GoogleGenerativeAI(model="gemini-pro",google_api_key=os.environ["GOOGLE_API_KEY"], temperature=0.7)
 
-print(llm.invoke("what are some pros and cons of python"))
-# # # Initialize instructor embeddings using the Hugging Face model
+# Initialize instructor embeddings using the Hugging Face model
 instructor_embeddings = HuggingFaceInstructEmbeddings()
 vectordb_file_path = "faiss_index"
 
