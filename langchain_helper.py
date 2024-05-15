@@ -37,10 +37,10 @@ def get_qa_chain():
     # Create a retriever for querying the vector database
     retriever = vectordb.as_retriever(score_threshold=0.7)
 
-    prompt_template = """Given the following context and a question, generate an answer based on this context only.
-    In the answer try to provide as much text as possible from "response" section in the source document context without making much changes.
-    If the answer is not found in the context, kindly state "I don't know." Don't try to make up an answer.
-
+    prompt_template = """"Please provide an answer to the question below, ensuring that your response is derived solely from the provided context. 
+    Focus on using the text from the 'response' section of the source document, altering it as little as possible. If the context does not contain the information necessary to answer the question, 
+    simply reply with 'I am not sure.' Avoid creating or inferring any information that is not explicitly stated in the context. 
+    
     CONTEXT: {context}
 
     QUESTION: {question}"""

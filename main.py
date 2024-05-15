@@ -4,6 +4,13 @@ from langchain_helper import get_qa_chain, create_vector_db
 
 st.title("Club Fitter")
 st.sidebar.header('Helpful Resources')
+st.sidebar.subheader('Ping - https://ping.com/en-us/blogs/proving-grounds')
+st.sidebar.subheader('Titleist - https://www.titleist.com/fitting')
+st.sidebar.subheader('Mizuno - https://mizunogolf.com/us/custom-fit/')
+st.sidebar.subheader('Callaway - https://www.callawaygolf.com/custom-fitting/')
+st.sidebar.subheader('Taylormade - https://www.taylormadegolf.com/locations.html?lang=en_US')
+st.sidebar.subheader('Trackman - https://blog.trackmangolf.com')
+                     
 st.markdown('''
         Welcome to your own personal AI Club Fitter. Ask any questions that come to mind like:  
             - What are the different flexes of shafts?  
